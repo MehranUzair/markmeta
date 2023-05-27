@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Mark: Meta Earth</title>
+
+	<link rel="stylesheet" href="fonts/load.css" />
+	<link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="css/faqs.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<a href="./index.html" class="header__logo">
+				<img src="img/logo.png" alt="Mark: Meta Earth" />
+			</a>
+
+			<button class="header__toggle" aria-expanded="false"></button>
+
+			<nav class="header__nav" aria-expanded=false>
+				<div class="header__nav-wrap">
+					<ul class="header__menu">
+						<li><a href="features.html" class="header__link">Features</a></li>
+						<li><a href="about.html" class="header__link">About</a></li>
+						<li><a href="faqs.html" class="header__link">FAQ’s</a></li>
+						<li>
+							<a href="#" class="button button--small">Download Now</a>
+						</li>
+					</ul>
+
+					<div class="header__badges">
+						<a href="#"><img src="img/app-store.svg" /></a>
+						<a href="#"><img src="img/play-store.svg" /></a>
+					</div>
+
+					<ul class="header__socials">
+						<li><a href="#"><img src="img/instagram.svg" /></a></li>
+						<li><a href="#"><img src="img/twitter.svg" /></a></li>
+						<li><a href="#"><img src="img/discord.svg" /></a></li>
+					</ul>
+
+					<ul class="header__legal">
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Cookies Policy</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="example">
+			<div class="container">
+				<h2>Features</h2>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<section class="footer__widgets">
+				<div class="footer__widget">
+					<a href="./index.html" class="footer__logo">
+						<img src="img/logo-slogan.png" alt="Mark: Meta Earth" />
+					</a>
+				</div>
+
+				<div class="footer__widget">
+					<h5 class="footer__heading">Menu</h5>
+
+					<ul class="footer__menu">
+						<li><a href="features.html">Features</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="faqs.html">FAQ’s</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__widget">
+					<h5 class="footer__heading">Social</h5>
+
+					<ul class="footer__menu">
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">LinkedIn</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__widget">
+					<h5 class="footer__heading">Subscribe for News and Updates</h5>
+
+					<form class="footer__newsletter">
+						<input type="email" name="email" placeholder="Enter e-mail here *" required />
+						<button class="button button--small">Join</button>
+					</form>
+
+					<div class="footer__badges">
+						<a href="#"><img src="img/app-store.svg" /></a>
+						<a href="#"><img src="img/play-store.svg" /></a>
+					</div>
+				</div>
+			</section>
+
+			<section class="footer__bottom">
+				<ul class="footer__legal">
+					<li><a href="#">Terms & Conditions</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Cookies Policy</a></li>
+				</ul>
+
+				<p class="footer__copy">@2023 by Mark:MetaEarth. Powered and secured by YouYaa</p>
+			</section>
+		</div>
+	</footer>
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+	<script type="text/javascript">
+		addEventListener('DOMContentLoaded', () => {
+			const toggle = document.querySelector('.header__toggle');
+			const nav = document.querySelector('.header__nav');
+
+			toggle.addEventListener('click', function () {
+				const expanded = toggle.ariaExpanded == 'true' ? 'false' : 'true';
+
+				toggle.ariaExpanded = expanded;
+				nav.ariaExpanded = expanded;
+			});
+		});
+
+		addEventListener('DOMContentLoaded', () => {
+			const faqs = document.querySelectorAll('.faq');
+
+			function onClick() {
+				const active = document.querySelector('.faq--active');
+				active?.classList.remove('faq--active');
+
+				if (this == active) return;
+
+				this.classList.add('faq--active');
+			}
+
+			faqs.forEach(faq => {
+				faq.addEventListener('click', onClick);
+			});
+		});
+	</script>
+</body>
+</html>
