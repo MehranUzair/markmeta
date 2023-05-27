@@ -1,0 +1,144 @@
+.footer {
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(20px);
+	padding: 48px 0 32px;
+	color: #fff;
+}
+
+.footer__widgets {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 48px;
+}
+
+.footer__logo img {
+	display: block;
+	height: 60px;
+}
+
+.footer__heading {
+	
+}
+
+.footer__menu {}
+.footer__menu li + li {
+	margin-top: 6px;
+}
+.footer__menu a {
+	color: inherit;
+}
+
+.footer__newsletter {
+	width: 100%;
+	position: relative;
+}
+.footer__newsletter input {
+	display: block;
+	background: rgba(255, 255, 255, 0.6);
+	width: 100%;
+	height: 52px;
+	border: 0;
+	border-radius: 10px;
+	font-size: 15px;
+	line-height: 20px;
+	color: #545454;
+	padding: 16px;
+}
+.footer__newsletter button {
+	min-width: 160px;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+}
+
+.footer__badges {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	margin: 24px 0 0;
+}
+.footer__badges img {
+	display: block;
+	height: 40px;
+}
+
+.footer__bottom {
+	margin: 54px 0 0;
+}
+
+.footer__legal {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	line-height: 16px;
+}
+.footer__legal li {
+	display: flex;
+}
+.footer__legal li:not(:last-child):after {
+	content: "|";
+	display: inline-block;
+	margin: 0 6px;
+}
+.footer__legal a {
+	display: block;
+	color: inherit;
+}
+
+.footer__copy {
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
+}
+
+@media (min-width: 1200px) {
+	.footer__widget:last-child {
+		width: 38%;
+	}
+
+	.footer__bottom {
+		display: flex;
+		gap: 16px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.footer__widget:last-child {
+		width: 100%;
+	}
+
+	.footer__bottom {
+		margin: 32px 0 0;
+	}
+
+	.footer__copy {
+		margin: 12px 0 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer {
+		padding-bottom: 48px;
+	}
+
+	.footer__widgets {
+		justify-content: flex-start;
+	}
+	.footer__widget {
+		min-width: 30%;
+	}
+	.footer__widget:first-child {
+		width: 100%;
+		border-bottom: 1px solid #fff;
+		padding-bottom: 40px;
+	}
+
+	.footer__newsletter button {
+		min-width: 112px;
+	}
+
+	.footer__badges {
+		margin-top: 48px;
+	}
+}

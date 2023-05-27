@@ -1,0 +1,40 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--grid-gutter: 16px;
+	--grid-gutter-half: calc( var(--grid-gutter) / 2 );
+
+	--grid-container: 575px;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--grid-gutter: 20px;
+		--grid-container: 668px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--grid-gutter: 30px;
+		--grid-container: 1140px;
+	}
+}
+
+@media (min-width: 1440px) {
+	:root {
+		--grid-gutter: 30px;
+		--grid-container: 1240px;
+	}
+}
+
+.container {
+	padding: 0 30px;
+	width: 100%;
+	max-width: calc(var(--grid-container) + 30px);
+	margin: 0 auto;
+}

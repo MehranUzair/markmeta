@@ -1,0 +1,61 @@
+body {
+	font-family: 'Avenir', sans-serif;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0 0 16px;
+}
+
+h1 {
+	font-size: 54px;
+	font-weight: 800;
+	line-height: 72px;
+}
+
+h2 {
+	font-size: 42px;
+	font-weight: 800;
+	line-height: 58px;
+}
+
+h3 {
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 48px;
+}
+
+h4 {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 38px;
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 30px;
+}
+
+h1 b,
+h2 b,
+h3 b,
+h4 b,
+h5 b {
+	font-weight: inherit;
+	color: var(--color-primary);
+}
+
+p {
+	margin: 0 0 16px;	
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+small {
+	font-size: 12px;
+	line-height: 20px;
+}
